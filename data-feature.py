@@ -1,4 +1,5 @@
 import requests
+from IPython.display import Image, display
 
 # Step 1: Get weather data using OpenWeatherMap API
 def get_weather(city):
@@ -42,6 +43,7 @@ def weather_image_pipeline(city):
         image_url = get_image(weather_description + " in " + city)
         if image_url:
             print(f"Image based on '{weather_description}' in '{city}': {image_url}")
+            display(Image(url=image_url))
         else:
             print(f"No image found for '{weather_description}'.")
     else:
