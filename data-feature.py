@@ -3,7 +3,7 @@ from IPython.display import Image, display
 
 # Step 1: Get weather data using OpenWeatherMap API
 def get_weather(city):
-    api_key = "b4a8520b117906a72280baaea16d9407"
+    api_key = "API_KEY"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
     response = requests.get(url)
     data = response.json()
@@ -17,7 +17,7 @@ def get_weather(city):
 
 # Step 2: Get image based on weather description using Pexels API
 def get_image(query):
-    api_key = "trV5T9s0rCeUjbpNzSasIMyMbd49jquAL8WUc7XhhtDNnOZusB5MdAJt"
+    api_key = "API_KEY"
     url = "https://api.pexels.com/v1/search"
     headers = {
         "Authorization": api_key
